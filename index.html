@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="naver-site-verification" content="34fd011aeaeb3ad8fe7619c56b576e7e4549da83" />
+    <title>공덕동</title>
+    <meta name="description" content="PULSE FITNESS에서 최고 수준의 트레이너들과 맞춤형 프로그램을 통해 새로운 건강한 삶을 시작하세요. 실시간 BMI 계산기 제공.">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bolt"></i> PULSE <span>FITNESS</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="active">홈</a>
+                <a href="#programs">프로그램</a>
+                <a href="#bmi">BMI 계산기</a>
+                <a href="#trainers">트레이너</a>
+                <a href="#pricing">멤버십</a>
+                <a href="gyms.html">전국 지점 찾기</a>
+                <a href="#contact">문의하기</a>
+                <a href="muscle.html" class="muscle-link">근육 정보</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">상담 예약</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 토글">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-center-container">
+            <div class="hero-content reveal text-center" style="width: 100%;">
+                <span class="hero-tagline"><i class="fa-solid fa-star"></i> PREMIUM FITNESS EXPERIENCE</span>
+
+                <!-- 1. 위에는 홈페이지 제목 -->
+                <h1 class="hero-title center-title">
+                    LIMITLESS <span>POTENTIAL</span> <em>AWAITS</em>
+                </h1>
+
+                <!-- 2. 중간에는 그림 -->
+                <div class="hero-image-container reveal"
+                    style="transition-delay: 0.2s; margin: 35px auto; max-width: 700px; width: 100%;">
+                    <div class="hero-image-wrapper header-illustration" style="overflow: hidden;">
+                        <!-- We will generate this premium image -->
+                        <img src="assets/hero_workout.png" alt="PULSE FITNESS Gym Athlete Training"
+                            class="hero-running-video">
+                    </div>
+                </div>
+
+                <p class="hero-desc" style="margin: 0 auto 30px auto; max-width: 650px;">
+                    평범함을 거부합니다. 최고급 장비, 검증된 전문 트레이너진, 그리고 당신만을 위한 체계적인 케어 시스템을 통해 꿈꾸던 피지컬을 현실로 만드세요.
+                </p>
+
+                <div class="hero-btns" style="justify-content: center; margin-bottom: 40px;">
+                    <a href="#pricing" class="btn btn-primary">지금 시작하기 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#programs" class="btn btn-secondary">프로그램 둘러보기</a>
+                </div>
+
+                <div class="hero-stats" style="justify-content: center; gap: 60px;">
+                    <div class="hero-stat-item">
+                        <h3>10K+</h3>
+                        <p>누적 회원 수</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h3>50+</h3>
+                        <p>전문 코치진</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h3>99%</h3>
+                        <p>목표 달성률</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">OUR PROGRAMS</span>
+                <h2 class="section-title">목표를 이루는 체계적인 세션</h2>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="program-title">1:1 맞춤형 피티 (PT)</h3>
+                    <p class="program-desc">
+                        개인의 체형 분석과 체력 수준에 맞춰 완벽히 커스터마이징된 1대1 집중 트레이닝입니다.
+                    </p>
+                    <a href="javascript:void(0)" class="program-more" id="ptLearnMoreBtn">더 알아보기 <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal" style="transition-delay: 0.1s;">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="program-title">고강도 컨디셔닝 (HIIT)</h3>
+                    <p class="program-desc">
+                        최단 시간 고효율을 내는 심폐 지구력 강화 및 급속 지방 연소를 위한 하이 엔드 컨디셔닝 프로그램입니다.
+                    </p>
+                    <a href="#contact" class="program-more">더 알아보기 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal" style="transition-delay: 0.2s;">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="program-title">필라테스 & 요가</h3>
+                    <p class="program-desc">
+                        코어 근육 강화, 자세 교정, 유연성 극대화 및 몸과 마인드의 밸런스를 찾는 웰니스 프로그램입니다.
+                    </p>
+                    <a href="#contact" class="program-more">더 알아보기 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal" style="transition-delay: 0.3s;">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <h3 class="program-title">영양 및 라이프 코칭</h3>
+                    <p class="program-desc">
+                        임상 영양 분석을 기반으로 한 식단 솔루션과 지속 가능한 일상 습관을 가꿔주는 관리 프로그램입니다.
+                    </p>
+                    <a href="#contact" class="program-more">더 알아보기 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Calculator Section -->
+    <section class="bmi" id="bmi">
+        <div class="bmi-bg-decor"></div>
+        <div class="container">
+            <div class="bmi-grid">
+                <div class="bmi-content reveal">
+                    <span class="section-subtitle">BMI CALCULATOR</span>
+                    <h2 class="section-title">스마트 실시간 BMI 계산기</h2>
+                    <p>
+                        비만도 지수(BMI)는 키와 몸무게를 이용하여 몸의 체지방량을 간접적으로 평가하는 지표입니다.
+                        수치를 입력하고 개인 맞춤형 운동 목표 설정을 위한 첫걸음을 내딛으세요.
+                    </p>
+                    <div class="bmi-table">
+                        <div class="bmi-table-row">
+                            <span>저체중 (Underweight)</span>
+                            <span>&lt; 18.5</span>
+                        </div>
+                        <div class="bmi-table-row">
+                            <span>정상 체중 (Normal)</span>
+                            <span>18.5 – 24.9</span>
+                        </div>
+                        <div class="bmi-table-row">
+                            <span>과체중 (Overweight)</span>
+                            <span>25.0 – 29.9</span>
+                        </div>
+                        <div class="bmi-table-row">
+                            <span>비만 (Obese)</span>
+                            <span>&ge; 30.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bmi-card reveal" style="transition-delay: 0.2s;">
+                    <form id="bmiForm">
+                        <div class="bmi-form-group">
+                            <label for="bmiHeight" class="bmi-label">신장 (Height)</label>
+                            <div class="bmi-input-wrapper">
+                                <input type="number" id="bmiHeight" class="bmi-input" placeholder="예: 175" required
+                                    min="100" max="250">
+                                <span class="bmi-unit">cm</span>
+                            </div>
+                        </div>
+                        <div class="bmi-form-group">
+                            <label for="bmiWeight" class="bmi-label">몸무게 (Weight)</label>
+                            <div class="bmi-input-wrapper">
+                                <input type="number" id="bmiWeight" class="bmi-input" placeholder="예: 70" required
+                                    min="30" max="200">
+                                <span class="bmi-unit">kg</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">내 BMI 분석하기 <i
+                                class="fa-solid fa-calculator"></i></button>
+                    </form>
+
+                    <!-- Results Box -->
+                    <div class="bmi-results" id="bmiResults">
+                        <div class="bmi-result-grid">
+                            <div class="bmi-value-box">
+                                <div class="bmi-number" id="bmiNumber">--.-</div>
+                                <div class="bmi-lbl">BMI SCORE</div>
+                            </div>
+                            <div class="bmi-status-box">
+                                <h4 id="bmiStatus">결과 대기 중</h4>
+                                <p id="bmiDesc">신장과 몸무게를 입력한 뒤 계산 버튼을 눌러주세요.</p>
+                            </div>
+                        </div>
+                        <div class="bmi-gauge-bar">
+                            <div class="bmi-gauge-fill" id="bmiGauge"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainers" id="trainers">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">EXPERT COACHES</span>
+                <h2 class="section-title">최고의 전문 트레이너진</h2>
+            </div>
+            <div class="trainers-grid">
+                <!-- Trainer 1 -->
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-box">
+                        <img src="assets/trainer1.png" alt="Leo Kim Trainer">
+                        <div class="trainer-overlay">
+                            <div class="trainer-socials">
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Head Coach / PT</span>
+                        <h3 class="trainer-name">Leo Kim</h3>
+                        <div class="trainer-tags">
+                            <span class="trainer-tag">국제 퍼스널 트레이닝 협회(IPTA)</span>
+                            <span class="trainer-tag">선수 재활 전문</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trainer 2 -->
+                <div class="trainer-card reveal" style="transition-delay: 0.1s;">
+                    <div class="trainer-img-box">
+                        <img src="assets/trainer2.png" alt="Sarah Choi Trainer">
+                        <div class="trainer-overlay">
+                            <div class="trainer-socials">
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Pilates Specialist</span>
+                        <h3 class="trainer-name">Sarah Choi</h3>
+                        <div class="trainer-tags">
+                            <span class="trainer-tag">기구 필라테스 마스터</span>
+                            <span class="trainer-tag">체형 교정 전문</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trainer 3 -->
+                <div class="trainer-card reveal" style="transition-delay: 0.2s;">
+                    <div class="trainer-img-box">
+                        <img src="assets/trainer3.png" alt="David Park Trainer">
+                        <div class="trainer-overlay">
+                            <div class="trainer-socials">
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <span class="trainer-role">Athletic Conditioning</span>
+                        <h3 class="trainer-name">David Park</h3>
+                        <div class="trainer-tags">
+                            <span class="trainer-tag">보디빌딩 대회 다수 수상</span>
+                            <span class="trainer-tag">다이어트 전문</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">MEMBERSHIP PLANS</span>
+                <h2 class="section-title">멤버십 준비중입니다.</h2>
+            </div>
+
+            <div class="pricing-toggle-wrapper reveal">
+                <span class="pricing-toggle-label active" id="planToggleM">월간 결제</span>
+                <div class="pricing-switch" id="pricingSwitch">
+                    <div class="pricing-switch-ball"></div>
+                </div>
+                <span class="pricing-toggle-label" id="planToggleA">연간 결제</span>
+                <span class="pricing-discount">20% 할인</span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Card -->
+                <div class="pricing-card reveal">
+                    <h3 class="pricing-name">BASIC PLAN</h3>
+                    <p class="pricing-desc">자유로운 개인 운동과 헬스장 기본 시설을 마음껏 이용해 보세요.</p>
+                    <div class="pricing-cost">
+                        <span class="pricing-currency">₩</span>
+                        <span class="pricing-amount" id="priceBasic">39,000</span>
+                        <span class="pricing-period">/ 월</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 모든 헬스 기구 무제한 이용</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 최고급 샤워실 및 락커 제공</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 최초 1회 OT 및 인바디 측정</li>
+                        <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> 1:1 개인 PT 동반 수강</li>
+                        <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> GX / 기구 필라테스 무료 이용</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary pricing-btn">기본 플랜 선택하기</a>
+                </div>
+
+                <!-- Premium Card -->
+                <div class="pricing-card popular reveal" style="transition-delay: 0.1s;">
+                    <h3 class="pricing-name">PREMIUM VIP</h3>
+                    <p class="pricing-desc">전문 트레이너의 밀착 관리와 다양한 고품격 세션을 동시에 누리세요.</p>
+                    <div class="pricing-cost">
+                        <span class="pricing-currency">₩</span>
+                        <span class="pricing-amount" id="pricePremium">79,000</span>
+                        <span class="pricing-period">/ 월</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 모든 헬스 기구 무제한 이용</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 최고급 샤워실, 타올 & 개인 락커</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 1:1 전담 PT 제공 (월 4회)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> GX / 필라테스 / 스피닝 전 세션 무료</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 맞춤 영양 관리 식단표 제공</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary pricing-btn">프리미엄 가입하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-container reveal text-center">
+                <span class="section-subtitle">CONTACT US</span>
+                <h2 class="section-title" style="margin-bottom: 16px;">준비중입니다.</h2>
+                <p class="section-desc"
+                    style="margin: 0 auto 30px auto; max-width: 600px; color: var(--color-text-muted);">
+                    현재 온라인 예약 및 문의 서비스가 준비 중에 있습니다.<br>
+                    빠른 시일 내에 편리한 상담 및 예약 시스템으로 찾아뵙겠습니다. 이용에 불편을 드려 대단히 죄송합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-bolt"></i> PULSE <span>FITNESS</span>
+                    </a>
+                    <p>당신의 더 나은 삶과 건강한 육체를 향한 도전을 최고의 기술력과 서비스로 지원합니다.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>퀵 링크</h4>
+                    <div class="footer-links">
+                        <a href="#hero">홈</a>
+                        <a href="#programs">프로그램</a>
+                        <a href="#bmi">BMI 계산기</a>
+                        <a href="#trainers">트레이너 소개</a>
+                        <a href="#pricing">멤버십 요금제</a>
+                        <a href="gyms.html">전국 지점 찾기</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>운영 시간</h4>
+                    <div class="footer-links">
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">평일 (월 - 금): 06:00 - 24:00</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">토요일: 08:00 - 20:00</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">일요일 & 공휴일: 10:00 - 18:00</p>
+                        <p style="color: var(--color-accent); font-size: 0.9rem; font-weight: 600; margin-top: 8px;">*
+                            매월 둘째, 넷째 일요일 휴관</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PULSE FITNESS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" style="margin-right: 20px;">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PT Goal Selector Modal -->
+    <div class="modal-overlay" id="ptModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalCloseBtn" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">당신의 피트니스 목표를 선택해 주세요</h3>
+            <p class="modal-subtitle">PULSE FITNESS 전용 가이드 페이지로 이동합니다.</p>
+            <div class="modal-options">
+                <a href="./bulkup.html" class="modal-option-card bulking">
+                    <div class="option-icon"><i class="fa-solid fa-fire"></i></div>
+                    <h4>벌크업 (Bulk Up)</h4>
+                    <p>근육량 증가와 강인한 체형을 위한 벌크업 운동 및 식단 가이드</p>
+                    <span class="option-btn">정보 보기 <i class="fa-solid fa-chevron-right"></i></span>
+                </a>
+                <a href="./diet.html" class="modal-option-card diet">
+                    <div class="option-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h4>다이어트 (Diet)</h4>
+                    <p>체지방 감소, 데피니션 강화 및 체계적인 다이어트 식단 가이드</p>
+                    <span class="option-btn">정보 보기 <i class="fa-solid fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>

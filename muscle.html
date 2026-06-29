@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE FITNESS - 남자 근육 구조 가이드</title>
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .muscle-section {
+            padding-top: 140px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+        .muscle-image-container {
+            margin: 40px auto;
+            max-width: 420px;
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(239, 68, 68, 0.05);
+            border: 1px solid var(--border-color);
+            background: #0d0d0f; /* Dark premium background to fit the dark photo */
+            padding: 24px;
+            transition: var(--transition-smooth);
+        }
+        .muscle-image-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5), 0 0 50px rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+        .muscle-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-text-muted);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            transition: var(--transition-fast);
+        }
+        .back-home:hover {
+            color: var(--color-accent);
+            transform: translateX(-4px);
+        }
+        .hotspot {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 2px dashed transparent;
+            background-color: rgba(255, 59, 48, 0);
+            transition: all 0.25s ease;
+        }
+        .hotspot:hover {
+            border-color: rgba(255, 59, 48, 0.8);
+            background-color: rgba(255, 59, 48, 0.15);
+            box-shadow: 0 0 15px rgba(255, 59, 48, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-bolt"></i> PULSE <span>FITNESS</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html#hero">홈</a>
+                <a href="index.html#programs">프로그램</a>
+                <a href="index.html#bmi">BMI 계산기</a>
+                <a href="index.html#trainers">트레이너</a>
+                <a href="index.html#pricing">멤버십</a>
+                <a href="gyms.html">전국 지점 찾기</a>
+                <a href="index.html#contact">문의하기</a>
+                <a href="muscle.html" class="muscle-link active">근육 정보</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="index.html#contact" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">상담 예약</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 토글">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Muscle Info Section -->
+    <section class="muscle-section">
+        <div class="container">
+            <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> 메인 화면으로 돌아가기</a>
+            <div class="section-header">
+                <span class="section-subtitle" style="color: #ff3b30; letter-spacing: 2px;">ANATOMY GUIDE</span>
+                <h1 class="section-title" style="margin-top: 8px;">남자 근육 구조 가이드</h1>
+                <p style="color: var(--color-text-muted); margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                    신체의 주요 근육 부위별 명칭과 구조입니다. 웨이트 트레이닝 시 타겟 부위의 자극을 극대화하고 올바른 운동 자세를 설계하는 데 도움이 됩니다.
+                </p>
+            </div>
+
+            <div class="muscle-image-container">
+                <p style="color: #ff3b30; font-size: 0.85rem; margin-bottom: 15px; font-weight: 600;"><i class="fa-solid fa-circle-info"></i> 사진에 적힌 근육 명칭을 누르면 설명이 나옵니다.</p>
+                <div class="muscle-image-wrapper" style="position: relative; width: 100%;">
+                    <img src="남자 근육 구조.png" alt="남자 근육 구조도">
+                    
+                    <!-- Left Hotspots -->
+                    <div class="hotspot" style="top: 4.8%; left: 15.6%; width: 13.5%; height: 7%;" data-muscle="승모근"></div>
+                    <div class="hotspot" style="top: 15.1%; left: 11.7%; width: 13.5%; height: 7%;" data-muscle="삼각근"></div>
+                    <div class="hotspot" style="top: 24.4%; left: 11.7%; width: 13.5%; height: 7%;" data-muscle="대흉근"></div>
+                    <div class="hotspot" style="top: 33.7%; left: 10.7%; width: 13.5%; height: 7%;" data-muscle="이두근"></div>
+                    <div class="hotspot" style="top: 43.0%; left: 11.7%; width: 13.5%; height: 7%;" data-muscle="복직근"></div>
+                    <div class="hotspot" style="top: 52.2%; left: 11.7%; width: 13.5%; height: 7%;" data-muscle="전완근"></div>
+                    <div class="hotspot" style="top: 63.5%; left: 6.8%; width: 23%; height: 7%;" data-muscle="대퇴사두근"></div>
+                    <div class="hotspot" style="top: 78.1%; left: 11.7%; width: 17%; height: 7%;" data-muscle="전경골근"></div>
+                    
+                    <!-- Right Hotspots -->
+                    <div class="hotspot" style="top: 5.8%; left: 66.9%; width: 21%; height: 7%;" data-muscle="흉쇄유돌근"></div>
+                    <div class="hotspot" style="top: 15.6%; left: 73.2%; width: 13.5%; height: 7%;" data-muscle="삼각근_우"></div>
+                    <div class="hotspot" style="top: 24.4%; left: 73.2%; width: 13.5%; height: 7%;" data-muscle="대흉근_우"></div>
+                    <div class="hotspot" style="top: 33.7%; left: 73.2%; width: 13.5%; height: 7%;" data-muscle="복사근"></div>
+                    <div class="hotspot" style="top: 43.0%; left: 73.2%; width: 13.5%; height: 7%;" data-muscle="삼두근"></div>
+                    <div class="hotspot" style="top: 51.3%; left: 73.2%; width: 13.5%; height: 7%;" data-muscle="복근"></div>
+                    <div class="hotspot" style="top: 60.5%; left: 69.3%; width: 17%; height: 7%;" data-muscle="내전근"></div>
+                    <div class="hotspot" style="top: 70.3%; left: 69.3%; width: 19%; height: 7%;" data-muscle="햄스트링"></div>
+                    <div class="hotspot" style="top: 79.1%; left: 71.3%; width: 15%; height: 7%;" data-muscle="비복근"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlay for Muscle Info -->
+    <div class="modal-overlay" id="muscleModal">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <span class="section-subtitle" id="modalSub" style="color: #ff3b30; font-size: 0.85rem; letter-spacing: 1.5px;">MUSCLE DETAIL</span>
+            <h2 class="modal-title" id="modalTitle" style="margin-top: 10px; margin-bottom: 20px;">근육 명칭</h2>
+            
+            <div style="text-align: left; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; margin-bottom: 24px;">
+                <h4 style="font-family: var(--font-heading); font-weight: 700; color: #fff; margin-bottom: 8px; font-size: 1.05rem;"><i class="fa-solid fa-circle-info" style="color: #ff3b30; margin-right: 8px;"></i> 주요 기능 및 설명</h4>
+                <p id="modalDesc" style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">근육의 역할 설명이 여기에 표시됩니다.</p>
+                
+                <h4 style="font-family: var(--font-heading); font-weight: 700; color: #fff; margin-bottom: 8px; font-size: 1.05rem;"><i class="fa-solid fa-dumbbell" style="color: var(--color-accent); margin-right: 8px;"></i> 추천 운동</h4>
+                <p id="modalExercises" style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">추천 웨이트 트레이닝 운동 목록이 여기에 표시됩니다.</p>
+            </div>
+            
+            <button class="btn btn-primary" id="btnOk" style="width: 100%;">확인</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #050506; border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; color: var(--color-text-muted); font-size: 0.9rem;">
+        <div class="container">
+            <p>&copy; 2026 PULSE FITNESS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic & Mobile Menu script -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        }
+
+        // 2. Muscle Interactive Modal Data
+        const muscleData = {
+            '승모근': {
+                title: '승모근 (Trapezius)',
+                sub: '목 / 어깨 / 등 상부 근육',
+                desc: '목과 어깨, 등 상부를 연결하는 큰 부채꼴 모양의 근육입니다. 어깨를 으쓱하여 들어 올리거나 날개뼈를 모으고 아래로 내리는 동작을 담당합니다. 상체의 안정성을 유지하고 거북목과 어깨 통증 예방에 중요한 역할을 합니다.',
+                exercises: '덤벨 슈러그 (Shrugs), 페이스 풀 (Face Pulls), 바벨 로우 (Barbell Row)'
+            },
+            '삼각근': {
+                title: '삼각근 (Deltoids)',
+                sub: '어깨 근육',
+                desc: '어깨 관절을 둥글게 감싸고 있는 근육으로 전면, 측면, 후면 세 갈래로 나뉩니다. 팔을 앞으로 들어 올리고, 옆으로 벌리고, 뒤로 보내는 등 어깨 관절의 모든 회전 운동과 움직임에 관여합니다. 넓고 탄탄한 어깨 라인을 만드는 데 핵심입니다.',
+                exercises: '오버헤드 숄더 프레스 (Shoulder Press), 사이드 레터럴 레이즈 (Lateral Raise), 벤트오버 레터럴 레이즈'
+            },
+            '삼각근_우': {
+                title: '삼각근 (Deltoids)',
+                sub: '어깨 근육',
+                desc: '어깨 관절을 둥글게 감싸고 있는 근육으로 전면, 측면, 후면 세 갈래로 나뉩니다. 팔을 앞으로 들어 올리고, 옆으로 벌리고, 뒤로 보내는 등 어깨 관절의 모든 회전 운동과 움직임에 관여합니다. 넓고 탄탄한 어깨 라인을 만드는 데 핵심입니다.',
+                exercises: '오버헤드 숄더 프레스 (Shoulder Press), 사이드 레터럴 레이즈 (Lateral Raise), 벤트오버 레터럴 레이즈'
+            },
+            '대흉근': {
+                title: '대흉근 (Pectoralis Major)',
+                sub: '가슴 근육',
+                desc: '가슴 앞쪽을 넓게 덮고 있는 부채꼴 형태의 큰 근육입니다. 팔을 가슴 안쪽으로 모으거나(내전), 앞으로 밀어내고(굴곡), 팔을 안쪽으로 회전시키는 동작을 수행합니다. 상체 밀기 운동의 핵심 파워를 내는 근육입니다.',
+                exercises: '벤치 프레스 (Bench Press), 덤벨 플라이 (Dumbbell Fly), 푸쉬업 (Push-ups)'
+            },
+            '대흉근_우': {
+                title: '대흉근 (Pectoralis Major)',
+                sub: '가슴 근육',
+                desc: '가슴 앞쪽을 넓게 덮고 있는 부채꼴 형태의 큰 근육입니다. 팔을 가슴 안쪽으로 모으거나(내전), 앞으로 밀어내고(굴곡), 팔을 안쪽으로 회전시키는 동작을 수행합니다. 상체 밀기 운동의 핵심 파워를 내는 근육입니다.',
+                exercises: '벤치 프레스 (Bench Press), 덤벨 플라이 (Dumbbell Fly), 푸쉬업 (Push-ups)'
+            },
+            '이두근': {
+                title: '이두근 (Biceps Brachii)',
+                sub: '팔 앞쪽 근육 (알통)',
+                desc: '팔 위쪽 앞부분에 위치하여 흔히 알통이라고 불리는 근육으로 단두와 장두 두 갈래로 나뉩니다. 팔꿈치를 굽히고(굴곡) 손바닥이 하늘을 향하도록 팔을 안으로 돌리는(회외) 기능을 담당합니다.',
+                exercises: '바벨 컬 (Barbell Curl), 덤벨 해머 컬 (Hammer Curl), 친업 (Chin-ups)'
+            },
+            '복직근': {
+                title: '복직근 (Rectus Abdominis)',
+                sub: '복부 중앙 근육 (식스팩)',
+                desc: '복부 앞면에 수직으로 길게 뻗어 있는 근육으로 흔히 식스팩으로 불립니다. 갈비뼈에서 골반까지 연결되어 척추를 앞으로 굽히고(몸통 굽힘), 골반을 안정화하며 신체 내부의 장기를 보호하고 복압을 유지합니다.',
+                exercises: '크런치 (Crunch), 레그 레이즈 (Leg Raise), 플랭크 (Plank)'
+            },
+            '전완근': {
+                title: '전완근 (Forearm Muscles)',
+                sub: '팔뚝 근육',
+                desc: '팔꿈치부터 손목 사이에 위치한 수많은 굴곡근과 신전근들로 구성된 근육군입니다. 손가락을 쥐는 악력(손아귀 힘)과 손목을 굽히고 펴고 회전하는 모든 섬세한 손 동작을 제어합니다. 모든 상체 웨이트 운동의 버팀목이 됩니다.',
+                exercises: '리스트 컬 (Wrist Curl), 파머스 캐리 (Farmer\'s Carry), 리버스 바벨 컬'
+            },
+            '대퇴사두근': {
+                title: '대퇴사두근 (Quadriceps Femoris)',
+                sub: '허벅지 앞쪽 근육',
+                desc: '넙다리곧은근, 가쪽넓은근, 안쪽넓은근, 중간넓은근 네 갈래로 이루어진 인체에서 가장 거대한 근육군입니다. 무릎 관절을 펴고 고관절을 굽히는 역할을 하며 걷기, 달리기, 계단 오르기, 점프 등 하체의 폭발적인 추진력을 만들어냅니다.',
+                exercises: '바벨 스쿼트 (Squat), 레그 프레스 (Leg Press), 레그 익스텐션 (Leg Extension)'
+            },
+            '전경골근': {
+                title: '전경골근 (Tibialis Anterior)',
+                sub: '정강이 앞쪽 근육',
+                desc: '정강이뼈 바깥쪽에서 시작하여 발목 앞을 지나 발바닥 안쪽까지 연결된 근육입니다. 발목을 위로 들어 올리는(배측굴곡) 동작을 주도하며, 걸을 때 발끝이 지면에 걸리지 않게 방지하고 보행 시 충격을 흡수해 줍니다.',
+                exercises: '토 레이즈 (Toe Raises), 발목 스트레칭 및 밴드 운동'
+            },
+            '흉쇄유돌근': {
+                title: '흉쇄유돌근 (Sternocleidomastoid)',
+                sub: '목 측면 근육 (목빗근)',
+                desc: '복장뼈(흉골)와 빗장뼈(쇄골)에서 시작하여 귀 뒤의 관자뼈(유돌돌기)까지 비스듬히 뻗어 있는 목의 대표적인 근육입니다. 양쪽이 함께 수축하면 머리를 앞으로 숙이고, 한쪽만 수축하면 머리를 반대쪽으로 회전시키거나 옆으로 기울입니다. 목의 안정성을 지탱합니다.',
+                exercises: '목 스트레칭 (전후좌우), 넥 익스텐션 (가벼운 저항)'
+            },
+            '복사근': {
+                title: '외/내복사근 (Obliques)',
+                sub: '옆구리 근육',
+                desc: '배의 양옆 옆구리에 대각선 방향으로 겹쳐져 있는 근육군입니다. 몸통을 좌우로 회전시키거나 옆으로 구부리는 기능을 수행하며, 척추를 비틀림으로부터 보호하고 허리 코어 라인을 탄탄하게 지탱합니다.',
+                exercises: '러시안 트위스트 (Russian Twist), 사이드 플랭크 (Side Plank), 행잉 사이드 레그 레이즈'
+            },
+            '삼두근': {
+                title: '삼두근 (Triceps Brachii)',
+                sub: '팔 뒤쪽 근육',
+                desc: '팔 위쪽 뒷부분에 위치하여 장두, 외측두, 내측두 세 갈래로 나뉜 근육입니다. 팔꿈치를 곧게 펴는(신전) 주된 역할을 하며, 미는 운동(프레스 동작) 시 핵심 보조 힘을 담당합니다. 팔의 전체적인 부피감의 60% 이상을 결정합니다.',
+                exercises: '라잉 트라이셉스 익스텐션, 케이블 푸쉬다운 (Pushdown), 덤벨 킥백 (Kickback)'
+            },
+            '복근': {
+                title: '하부 복직근 (Lower Abs)',
+                sub: '아랫배 근육',
+                desc: '복직근의 아래쪽 영역으로 골반을 위로 잡아당겨 척추 하부와 골반의 경사를 중립적으로 조율하는 코어 근육입니다. 걷거나 뛸 때 흔들리는 하체를 지탱하며 허리 통증을 예방하는 역할을 합니다.',
+                exercises: '행잉 레그 레이즈 (Hanging Leg Raise), 리버스 크런치 (Reverse Crunch), 레그 드롭'
+            },
+            '내전근': {
+                title: '내전근군 (Adductors)',
+                sub: '허벅지 안쪽 근육',
+                desc: '골반에서 시작하여 허벅지 뼈 안쪽으로 연결되는 근육군(대내전근, 장내전근 등)입니다. 벌어진 다리를 안쪽으로 모으고, 고관절을 안정시키며 걷거나 한 발로 설 때 좌우 골반의 수평 밸런스를 잡아주는 중요 근육입니다.',
+                exercises: '와이드 스쿼트 (Wide Squat), 이너 타이 (Inner Thigh Machine), 런지 (Lunge)'
+            },
+            '햄스트링': {
+                title: '햄스트링 (Hamstrings)',
+                sub: '허벅지 뒤쪽 근육',
+                desc: '허벅지 뒤쪽에 있는 대퇴이두근, 반건양근, 반막양근으로 구성된 근육군입니다. 무릎 관절을 굽히고 고관절을 뒤로 펴는(신전) 핵심 기능을 수행하며 달리기 제동, 방향 전환, 무릎 부상 방지에 매우 중요합니다.',
+                exercises: '루마니안 데드리프트 (Deadlift), 레그 컬 (Leg Curl), 스티프 레그 데드리프트'
+            },
+            '비복근': {
+                title: '비복근 (Gastrocnemius)',
+                sub: '종아리 근육',
+                desc: '종아리 뒤쪽에 둥글게 솟아오른 두 갈래의 큰 근육으로, 아킬레스건을 통해 뒤꿈치 뼈에 연결됩니다. 발끝을 아래로 강하게 밀어내며(저측굴곡) 걷기, 달리기, 점프 시 지면을 박차고 나가는 강력한 추진력을 제공합니다.',
+                exercises: '스탠딩 카프 레이즈 (Calf Raise), 시티드 카프 레이즈, 줄넘기'
+            }
+        };
+
+        // 3. Modal Control
+        const hotspots = document.querySelectorAll('.hotspot');
+        const modal = document.getElementById('muscleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSub = document.getElementById('modalSub');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalExercises = document.getElementById('modalExercises');
+        const closeModal = document.getElementById('closeModal');
+        const btnOk = document.getElementById('btnOk');
+
+        hotspots.forEach(hotspot => {
+            hotspot.addEventListener('click', () => {
+                const key = hotspot.getAttribute('data-muscle');
+                const data = muscleData[key];
+                if (data) {
+                    modalTitle.textContent = data.title;
+                    modalSub.textContent = data.sub;
+                    modalDesc.textContent = data.desc;
+                    modalExercises.innerHTML = data.exercises.split(', ').map(ex => `• ${ex}`).join('<br>');
+                    modal.classList.add('active');
+                }
+            });
+        });
+
+        // Close functions
+        const hideModal = () => {
+            modal.classList.remove('active');
+        };
+
+        if (closeModal) closeModal.addEventListener('click', hideModal);
+        if (btnOk) btnOk.addEventListener('click', hideModal);
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+    </script>
+</body>
+</html>

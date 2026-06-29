@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE DIET GUIDE - 지속 가능한 다이어트 가이드</title>
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Keep standard neon lime color for fresh health theme */
+        .guide-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(180deg, rgba(226, 253, 82, 0.05) 0%, transparent 100%);
+            text-align: center;
+        }
+        
+        .guide-subtitle {
+            color: var(--color-accent);
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .guide-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        
+        .guide-title span {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+        }
+
+        .guide-desc {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-text-muted);
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+        
+        .back-home:hover {
+            color: var(--color-accent);
+        }
+
+        .guide-section-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Routine Grid */
+        .routine-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .routine-table th, .routine-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .routine-table th {
+            background: rgba(226, 253, 82, 0.05);
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .routine-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .nutrition-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            height: 100%;
+            transition: var(--transition-smooth);
+        }
+        
+        .nutrition-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-bolt"></i> PULSE <span>FITNESS</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#hero">홈</a>
+                <a href="index.html#programs">프로그램</a>
+                <a href="index.html#bmi">BMI 계산기</a>
+                <a href="index.html#trainers">트레이너</a>
+                <a href="index.html#pricing">멤버십</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="index.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;"><i class="fa-solid fa-arrow-left"></i> 홈으로</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Guide Hero -->
+    <section class="guide-hero">
+        <div class="container">
+            <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> 메인 화면으로 돌아가기</a>
+            <span class="guide-subtitle">Fat Loss & Definition System</span>
+            <h1 class="guide-title">DIET <span>GUIDE</span></h1>
+            <p class="guide-desc">
+                단순히 굶어서 빼는 다이어트는 몸을 망칩니다. 체지방은 지우고, 근육량은 지키는 과학적인 다이어트 가이드를 확인하세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Rules Section -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="guide-section-title">다이어트의 3대 핵심 원칙</h2>
+            <div class="programs-grid">
+                <!-- Rule 1 -->
+                <div class="program-card reveal active">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="program-title">칼로리 적자 (Caloric Deficit)</h3>
+                    <p class="program-desc">
+                        체지방 연소를 시작하려면 매일 소비하는 총 열량(TDEE)보다 약 300~500kcal 적게 먹는 상태(칼로리 마이너스)를 지속적으로 유지해야 합니다.
+                    </p>
+                </div>
+                <!-- Rule 2 -->
+                <div class="program-card reveal active" style="transition-delay: 0.1s;">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="program-title">근손실 최소화 (Muscle Retention)</h3>
+                    <p class="program-desc">
+                        체중이 줄어들 때 근육이 빠지면 요요가 오기 쉽습니다. 단백질을 높게 유지하고 고중량 저항 운동을 지속하여 몸에 근육의 필요성을 주어야 합니다.
+                    </p>
+                </div>
+                <!-- Rule 3 -->
+                <div class="program-card reveal active" style="transition-delay: 0.2s;">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="program-title">수분 및 식이섬유 (Hydration)</h3>
+                    <p class="program-desc">
+                        하루 최소 2리터 이상의 물을 섭취해 체내 대사 작용을 원활하게 하고, 포만감을 오래 제공하는 신선한 채소를 식단에 듬뿍 포함해야 합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Plan Section -->
+    <section style="padding: 60px 0; background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="guide-section-title">다이어트 탄단지 영양 비율</h2>
+            <div class="programs-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                <!-- Nutrition Card 1 -->
+                <div class="nutrition-card reveal active">
+                    <h3 class="program-title" style="color: var(--color-accent);"><i class="fa-solid fa-wheat-awn"></i> 탄수화물 (Carbohydrates)</h3>
+                    <p class="program-desc" style="font-size: 0.95rem;">
+                        <strong>총 칼로리의 35% - 45%</strong><br><br>
+                        혈당을 완만히 올리고 인슐린 폭발을 막기 위해 당 지수(GI)가 낮고 식이섬유가 풍부한 건강한 탄수화물을 골라 드셔야 합니다.<br><br>
+                        <strong>추천 식품:</strong> 오트밀, 단호박, 현미밥, 퀴노아, 통밀빵
+                    </p>
+                </div>
+                <!-- Nutrition Card 2 -->
+                <div class="nutrition-card reveal active" style="transition-delay: 0.1s;">
+                    <h3 class="program-title" style="color: var(--color-accent);"><i class="fa-solid fa-fish"></i> 단백질 (Protein)</h3>
+                    <p class="program-desc" style="font-size: 0.95rem;">
+                        <strong>체중당 1.8g - 2.4g</strong><br><br>
+                        칼로리 마이너스 상태에서는 근손실 방지를 위해 평소보다 더 많은 양의 단백질 섭취가 권장됩니다. 소화율이 좋은 식품군으로 배분합니다.<br><br>
+                        <strong>추천 식품:</strong> 닭가슴살, 계란 흰자, 소고기 홍두깨살, 틸라피아(흰살생선), 생선회
+                    </p>
+                </div>
+                <!-- Nutrition Card 3 -->
+                <div class="nutrition-card reveal active" style="transition-delay: 0.2s;">
+                    <h3 class="program-title" style="color: var(--color-accent);"><i class="fa-solid fa-shrimp"></i> 지방 (Fat)</h3>
+                    <p class="program-desc" style="font-size: 0.95rem;">
+                        <strong>총 칼로리의 15% - 20%</strong><br><br>
+                        다이어트 시 과도한 무지방 식단은 호르몬 불균형과 피부 탄력 저하를 초래합니다. 오메가-3와 불포화 지방산을 적극 섭취해 건강한 순환을 만드세요.<br><br>
+                        <strong>추천 식품:</strong> 올리브유, 생선 기름(EPA/DHA), 견과류(아몬드), 들기름
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardio Routine Section -->
+    <section style="padding: 60px 0 100px;">
+        <div class="container">
+            <h2 class="guide-section-title">효과적인 체지방 감량 유산소 프로그램 (HIIT)</h2>
+            <div style="overflow-x: auto;">
+                <table class="routine-table">
+                    <thead>
+                        <tr>
+                            <th>단계</th>
+                            <th>구간</th>
+                            <th>속도 및 심박수 가이드</th>
+                            <th>시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>웜업 (Warm Up)</strong></td>
+                            <td>가벼운 걷기</td>
+                            <td>시속 4.5km ~ 5.5km (안정 심박수 유지)</td>
+                            <td>5분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>고강도 (High Intensity)</strong></td>
+                            <td>인터벌 러닝</td>
+                            <td>시속 10km ~ 12km (최대 심박수의 80%~90%)</td>
+                            <td>1분 (전력 질주)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>저강도 (Low Intensity)</strong></td>
+                            <td>가벼운 조깅</td>
+                            <td>시속 6km (안정 및 젖산 회복 유도)</td>
+                            <td>2분 (빠른 걷기 또는 조깅)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>인터벌 반복 (Interval)</strong></td>
+                            <td>인터벌 싸이클</td>
+                            <td>고강도(1분) + 저강도(2분) 반복 수행</td>
+                            <td>총 6~8회 반복 (총 24분)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>쿨다운 (Cool Down)</strong></td>
+                            <td>마무리 정리</td>
+                            <td>시속 4.0km (심박수를 천천히 가라앉히기)</td>
+                            <td>5분</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="index.html#contact" class="btn btn-primary">나만의 맞춤 다이어트 PT 상담받기 <i class="fa-solid fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #050506; border-top: 1px solid var(--border-color); padding: 40px 0;">
+        <div class="container" style="text-align: center; color: var(--color-text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 PULSE FITNESS. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

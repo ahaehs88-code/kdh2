@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE FITNESS - 전국 지점 찾기</title>
+    <meta name="description" content="전국의 PULSE FITNESS 지점 및 제휴 헬스클럽을 가격, 시설 면적, 결제 방식, 서비스 제공 여부(수건/운동복)에 맞게 검색하고 비교해보세요.">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- gyms.html Specific CSS -->
+    <link rel="stylesheet" href="gyms.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-bolt"></i> PULSE <span>FITNESS</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html#hero">홈</a>
+                <a href="index.html#programs">프로그램</a>
+                <a href="index.html#bmi">BMI 계산기</a>
+                <a href="index.html#trainers">트레이너</a>
+                <a href="index.html#pricing">멤버십</a>
+                <a href="gyms.html" class="active">전국 지점 찾기</a>
+                <a href="index.html#contact">문의하기</a>
+                <a href="muscle.html" class="muscle-link">근육 정보</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="index.html#contact" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">상담 예약</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 토글">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Gym Search & Filter Section -->
+    <section class="gym-search-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">FIND YOUR GYM</span>
+                <h2 class="section-title">나에게 딱 맞는 헬스클럽 찾기</h2>
+                <p style="color: var(--color-text-muted); margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    전국 지점의 상세 정보(이용 요금, 면적, 결제 수단, 운동복/수건 무료 제공 여부)를 한눈에 비교하고 최고의 운동 환경을 선택하세요.
+                </p>
+            </div>
+
+            <div class="search-layout">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar reveal">
+                    <div class="filter-header">
+                        <h3><i class="fa-solid fa-sliders"></i> 상세 필터</h3>
+                        <button type="button" class="btn-reset" id="btnResetFilters">초기화 <i class="fa-solid fa-rotate-left"></i></button>
+                    </div>
+
+                    <form id="filterForm">
+                        <!-- Search Keyword -->
+                        <div class="filter-group">
+                            <label class="filter-label" for="searchKeyword">클럽명 검색</label>
+                            <div class="search-input-wrapper">
+                                <input type="text" id="searchKeyword" placeholder="예: 강남, 오션, 웰니스...">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Region Filter -->
+                        <div class="filter-group">
+                            <label class="filter-label" for="filterRegion">지역 선택</label>
+                            <select id="filterRegion" class="filter-select">
+                                <option value="all">전체 지역</option>
+                                <option value="서울">서울특별시</option>
+                                <option value="부산">부산광역시</option>
+                                <option value="대구">대구광역시</option>
+                                <option value="인천">인천광역시</option>
+                                <option value="대전">대전광역시</option>
+                                <option value="광주">광주광역시</option>
+                            </select>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="filter-group">
+                            <label class="filter-label">월 가격대 (최대)</label>
+                            <div class="range-slider-wrapper">
+                                <input type="range" id="filterPrice" min="30000" max="80000" step="5000" value="80000">
+                                <div class="range-values">
+                                    <span>3만원</span>
+                                    <span id="priceVal" class="active-val">80,000원 이하</span>
+                                    <span>8만원</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Min Area (Size) -->
+                        <div class="filter-group">
+                            <label class="filter-label">시설 면적 (최소)</label>
+                            <div class="range-slider-wrapper">
+                                <input type="range" id="filterArea" min="300" max="900" step="50" value="300">
+                                <div class="range-values">
+                                    <span>300평</span>
+                                    <span id="areaVal" class="active-val">300평 이상</span>
+                                    <span>900평</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="filter-group">
+                            <label class="filter-label">결제 방식</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="payment" value="신용카드">
+                                    <span>신용카드</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="payment" value="카카오페이">
+                                    <span>카카오페이</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="payment" value="애플페이">
+                                    <span>애플페이</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="payment" value="지역화폐">
+                                    <span>지역화폐/제로페이</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Services (Towel / Clothes) -->
+                        <div class="filter-group">
+                            <label class="filter-label">무료 제공 서비스</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="freeTowel" value="towel">
+                                    <span>수건 무료 제공</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="freeClothes" value="clothes">
+                                    <span>운동복 무료 제공</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </aside>
+
+                <!-- Search Results -->
+                <main class="results-container">
+                    <div class="results-meta">
+                        <p>검색 결과 <span id="resultsCount">0</span>개 지점</p>
+                    </div>
+
+                    <!-- Gym Cards Grid -->
+                    <div class="gyms-grid" id="gymsGrid">
+                        <!-- Dynamic content loaded via JS -->
+                    </div>
+
+                    <!-- No Results Template -->
+                    <div class="no-results" id="noResults">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>검색 조건에 맞는 지점이 없습니다.</h3>
+                        <p>필터 조건을 변경하거나 초기화 버튼을 눌러 다시 검색해보세요.</p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-bolt"></i> PULSE <span>FITNESS</span>
+                    </a>
+                    <p>당신의 더 나은 삶과 건강한 육체를 향한 도전을 최고의 기술력과 서비스로 지원합니다.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>퀵 링크</h4>
+                    <div class="footer-links">
+                        <a href="index.html#hero">홈</a>
+                        <a href="index.html#programs">프로그램</a>
+                        <a href="index.html#bmi">BMI 계산기</a>
+                        <a href="index.html#trainers">트레이너 소개</a>
+                        <a href="index.html#pricing">멤버십 요금제</a>
+                        <a href="gyms.html">전국 지점 찾기</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>운영 시간</h4>
+                    <div class="footer-links">
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">평일 (월 - 금): 06:00 - 24:00</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">토요일: 08:00 - 20:00</p>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">일요일 & 공휴일: 10:00 - 18:00</p>
+                        <p style="color: var(--color-accent); font-size: 0.9rem; font-weight: 600; margin-top: 8px;">* 매월 둘째, 넷째 일요일 휴관</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PULSE FITNESS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" style="margin-right: 20px;">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS & Gyms Filter JS -->
+    <script src="app.js"></script>
+    <script src="gyms.js"></script>
+</body>
+</html>
